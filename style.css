@@ -1,0 +1,431 @@
+/* ----------------------------------------------
+   VARIÁVEIS
+---------------------------------------------- */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100%;
+}
+
+:root {
+    --primary-color: #3b82f6;
+    --primary-dark: #1e40af;
+    --transition-time: 0.3s;
+}
+
+/* ----------------------------------------------
+   GERAL
+---------------------------------------------- */
+body {
+    scroll-behavior: smooth;
+}
+
+#conteudo {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* ----------------------------------------------
+   TYPEWRITER
+---------------------------------------------- */
+.typewriter h2 {
+    overflow: hidden;
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    border-right: 0.15em solid #93c5fd;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+    max-width: 100%;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #93c5fd; }
+}
+
+@media (max-width: 375px) {
+    .typewriter h2 {
+        font-size: clamp(1.3rem, 4.5vw, 1.8rem);
+        letter-spacing: 0.03em;
+        animation:
+            typing 2.2s steps(28, end),
+            blink-caret 0.7s step-end infinite;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .typewriter h2 {
+        font-size: clamp(1.4rem, 4vw, 2rem);
+    }
+}
+
+/* ----------------------------------------------
+   CARDS (Habilidades normais)
+---------------------------------------------- */
+.skill-card {
+    transition: all var(--transition-time) ease;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.20) rotateX(3deg);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ----------------------------------------------
+   PROJETOS (slides)
+---------------------------------------------- */
+.sheet {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sheet.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.sheet.next,
+.sheet.prev {
+    opacity: 0;
+}
+
+/* ----------------------------------------------
+   BOTÃO EFEITO ONDA
+---------------------------------------------- */
+.wave-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1) translate(-50%, -50%);
+}
+
+.wave-btn:focus:not(:active)::after {
+    animation: wave 1s ease-out;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+/* ----------------------------------------------
+   FLUTUAÇÃO
+---------------------------------------------- */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ----------------------------------------------
+   HOVER EFFECT
+---------------------------------------------- */
+.hover-effect {
+    transition: transform var(--transition-time) ease,
+                color var(--transition-time) ease;
+}
+.hover-effect:hover {
+    transform: scale(1.05);
+    color: var(--primary-color);
+}
+
+/* ----------------------------------------------
+   MOBILE MENU
+---------------------------------------------- */
+@media (max-width: 767px) {
+    #mobile-menu {
+        transition: all 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+    #mobile-menu.active {
+        max-height: 300px;
+        padding: 10px 0;
+    }
+}
+
+/* ----------------------------------------------
+   RESPONSIVIDADE GERAL
+---------------------------------------------- */
+@media (max-width: 640px) {
+    .typewriter h2 {
+        font-size: 1.8rem;
+        animation:
+            typing 2.5s steps(30, end),
+            blink-caret .75s step-end infinite;
+    }
+
+    #sobre, #habilidades, #projetos, #contato {
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+
+    .skill-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ----------------------------------------------
+   SWIPER (proj. antigos)
+---------------------------------------------- */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+    overflow: visible !important;
+}
+
+.swiper:hover .swiper-button-next,
+.swiper:hover .swiper-button-prev {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.swiper:hover:not(:has(.skill-card:hover)) .swiper-button-next,
+.swiper:hover:not(:has(.skill-card:hover)) .swiper-button-prev {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ----------------------------------------------
+   CARROSSEL 3D (CIRCULAR)
+---------------------------------------------- */
+.carousel-3d {
+    width: 430px;
+    height: 430px;
+    margin: 0 auto;
+    perspective: 1200px;
+    overflow: visible;
+}
+#ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* ISSO É FUNDAMENTAL */
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.ring {
+    width: 100%;
+    height: 100%;
+    inset:0;
+    margin: auto;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-out;
+
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+}
+
+.ring:focus,
+.ring:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* ----------------------------------------------
+   CARTÕES 3D
+---------------------------------------------- */
+.skill-card-3d {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+
+  transform: translate(-50%, -50%);  /* CENTRALIZAÇÃO DE VERDADE */
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+
+  padding: 18px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  backdrop-filter: blur(4px);
+
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* VISUAL */
+  padding: 15px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+
+  /* TEXTO */
+  color: white;
+  font-size: 1rem;
+
+  /* ANIMAÇÃO */
+  transition: all 0.4s ease;
+}
+
+/* Espaçamento: logo em cima, texto abaixo */
+.skill-card-3d img {
+  margin-bottom: 10px;
+  pointer-events: none;
+}
+
+
+.skill-card-3d img {
+    pointer-events: none;
+}
+
+/* Frente (em destaque) */
+.skill-card-3d.front {
+    transform: scale(1.25);
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.4);
+    z-index: 999 !important;
+}
+
+/* Trás (desfocado) */
+.skill-card-3d.back {
+    opacity: 0.55;
+    filter: blur(0.3px);
+    transform: scale(0.88);
+}
+
+.skill-card-3d,
+.skill-card-3d * {
+  user-select: none;
+}
+/* Indicador de rolagem estilo Forza Horizon */
+.scroll-indicator {
+    position: absolute;
+    bottom: 5vh;         /* mais alto em telas pequenas */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    pointer-events: none;
+}
+
+.scroll-indicator .arrow {
+    width: 22px;
+    height: 22px;
+    border-left: 3px solid #00eaff;
+    border-bottom: 3px solid #00eaff;
+    transform: rotate(-45deg);
+    opacity: 0;
+    animation: arrowAnim 1.6s infinite;
+}
+
+.scroll-indicator .arrow:nth-child(1) {
+    animation-delay: 0s;
+}
+.scroll-indicator .arrow:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.scroll-indicator .arrow:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes arrowAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px) rotate(-45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px) rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(5px) rotate(-45deg);
+  }
+}
+@media (max-height: 700px) {
+  .scroll-indicator {
+      bottom: 3vh;   /* sobe mais a seta */
+  }
+}
+@media (max-width: 600px) {
+  .carousel-3d {
+    width: 300px;
+    height: 300px;
+  }
+
+  .skill-card-3d {
+    width: 120px;
+    height: 120px;
+  }
+}
+/* Ajuste do espaçamento do carrossel 3D */
+.carousel-3d {
+    margin-top: 6rem;   /* distância do título "Habilidades" */
+    margin-bottom: -10rem; /* distância antes de "Projetos" */
+}
+
+/* Opção: Se quiser deixar mais suave em mobile */
+@media (max-width: 600px) {
+    .carousel-3d {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+

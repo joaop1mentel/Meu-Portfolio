@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio de João Marcelo, estudante de Engenharia de Computação na UERJ">
+    <meta name="keywords" content="portfólio, desenvolvedor, engenharia de computação, UERJ">
+    <meta name="author" content="João Marcelo Macedo Pimentel">
+    <title>Portfólio | João Marcelo - Desenvolvedor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="font-sans text-purple-100 bg-gradient-to-br from-gray-900 via-purple-900 to-black transition-colors duration-300">
+
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-4">
+      <img 
+        id="avatar"
+        class="w-32 h-32 rounded-full mx-auto mb-6 transition-transform duration-300 hover:scale-110 cursor-pointer shadow-lg floating border-4 border-cyan-400"
+        src="eu.jpeg" 
+        alt="João Marcelo" 
+      />
+      <div class="typewriter">
+        <h2 class="text-4xl font-bold mb-4">Olá, eu sou João Marcelo</h2>
+      </div>
+      <div class="flex space-x-4 mt-4">
+        <a href="https://github.com/joaop1mentel" target="_blank" class="text-2xl text-cyan-400 hover:text-white transition-colors">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/joao-marcelo-macedo-pimentel-78a37b1b2" target="_blank" class="text-2xl text-cyan-400 hover:text-white transition-colors">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:joaomarcelopimentel@gmail.com" class="text-2xl text-cyan-400 hover:text-white transition-colors">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+          <div class="scroll-indicator">
+      <div class="arrow"></div>
+        <div class="arrow"></div>
+      <div class="arrow"></div>
+    </div>
+    
+    </section>
+
+    <div id="conteudo" class="transition-opacity duration-700">
+
+      <section id="sobre" class="max-w-4xl mx-auto px-6 py-24">
+        <div class="relative w-fit mx-auto mb-8">
+          <h3 class="text-3xl font-bold text-center relative z-10">Sobre mim</h3>
+          <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/3 flex justify-center">
+            <img src="eu.jpeg" alt="João Marcelo" class="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-cyan-400">
+          </div>
+          <div class="md:w-2/3">
+            <p class="leading-relaxed mb-4">
+              Sou estudante de Engenharia de Computação na UERJ, apaixonado por tecnologia, design e criação de soluções práticas. 
+            </p>
+            <p class="leading-relaxed mb-4">
+              Tenho experiência em desenvolvimento web (front-end e back-end), com boa base em algoritmos e estruturas de dados. Gosto de transformar ideias em ferramentas funcionais que ajudam pessoas no dia a dia
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades" class="py-16 bg-black bg-opacity-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="relative w-fit mx-auto mb-12">
+      <h3 class="text-3xl font-bold text-center relative z-10">Habilidades</h3>
+      <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
+    </div>
+
+    <!-- Carrossel Circular 3D -->
+    <div class="carousel-3d">
+      <div id="ring" class="ring">
+
+        <!-- 1 -->
+        <div class="skill-card-3d">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12 mb-2">
+          <p>HTML & CSS</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="skill-card-3d">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12 mb-2">
+          <p>JavaScript</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="skill-card-3d">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="w-10 h-10 mb-3">
+          <p>Linguagem C</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="skill-card-3d">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 h-12 mb-2">
+          <p>Python</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="skill-card-3d">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-12 h-12 mb-2">
+          <p>TailwindCSS</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="skill-card-3d">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 h-12 mb-2">
+          <p>Git</p>
+        </div>
+
+        <!-- 7 -->
+        <div class="skill-card-3d">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" class="w-12 h-12 mb-2">
+          <p>Photoshop</p>
+        </div>
+
+        <!-- 8 -->
+        <div class="skill-card-3d">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" class="w-12 h-12 mb-2 bg-white rounded-full">
+          <p>WordPress</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      <section id="projetos" class="py-16 bg-black bg-opacity-40">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="relative w-fit mx-auto mb-8">
+            <h3 class="text-3xl font-bold relative z-10">Projetos</h3>
+            <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
+          </div>
+      
+          <div class="flex items-center justify-center gap-6">
+            <button id="btn-prev" class="text-4xl hover:text-cyan-400 transition-colors focus:outline-none">
+              <i class="ri-arrow-left-s-line"></i>
+            </button>
+      
+            <div class="relative w-full max-w-2xl h-64">
+              <!-- Slide 1 -->
+              <div class="sheet active bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
+                <div class="text-center text-cyan-400 text-3xl mb-2">
+                  <i class="ri-shopping-cart-2-line"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2 text-white text-center">Site de vendas</h4>
+                <p class="text-white-600 mb-3 text-center">Site para vendas, com geração de QR Code para pagamento por Pix.</p>
+                <a href="https://frutas-steel.vercel.app/" target="_blank" class="text-cyan-400 hover:underline text-center">Veja o Site</a>
+              </div>
+      
+              <!-- Slide 2 -->
+              <div class="sheet active bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
+                <div class="text-center text-yellow-400 text-3xl mb-2">
+                  <i class="ri-code-line"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2 text-white text-center">Web Site de programação</h4>
+                <p class="text-white-600 mb-3 text-center">Projeto em andamento, mas pelo link você confere no Figma a ideia.</p>
+                <a href="https://www.figma.com/design/kcjZe8o3ACV96s1eGF4GhO/Untitled?node-id=0-1&t=PL4MVdpNrfNFqQQL-1" target="_blank" class="text-cyan-400 hover:underline text-center">Acesse aqui o projeto</a>
+              </div>
+      
+              <!-- Slide 3 -->
+              <div class="sheet bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
+                <div class="text-center text-blue-400 text-3xl mb-2">
+                  <i class="ri-terminal-line"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2 text-white text-center">CRUD em C</h4>
+                <p class="text-white-600 mb-3 text-center">Sistema completo para criar, ler, atualizar e deletar usuários por ID.</p>
+                <a href="https://github.com/joaop1mentel/Crud/blob/main/crud.c" target="_blank" class="text-cyan-400 hover:underline text-center">Ver código</a>
+              </div>
+      
+              <!-- Slide 4 -->
+              <div class="sheet bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
+                <div class="text-center text-purple-400 text-3xl mb-2">
+                  <i class="ri-stack-line"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2 text-white text-center">Implementação de Deque</h4>
+                <p class="text-white-600 mb-3 text-center">Código em C para inserir números em um vetor usando o sistema de deque.</p>
+                <a href="https://github.com/joaop1mentel/Estudo/blob/main/Deque" target="_blank" class="text-cyan-400 hover:underline text-center">Ver código</a>
+              </div>
+      
+              <!-- Slide 5 -->
+              <div class="sheet bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
+                <div class="text-center text-pink-400 text-3xl mb-2">
+                  <i class="ri-lightbulb-line"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2 text-white text-center">Simulação da etapa de clorificação</h4>
+                <p class="text-white-600 mb-3 text-center">Neste projeto simulei a etapa de clorificação de uma ETA, usando o tinkercad</p>
+                <a href="https://www.tinkercad.com/things/1d0arPrfI2G-sensor-pra-tratamento-de-agua?sharecode=dHL_HxWns8q4BWgmZFgIgfegx0SC1nk4oa7pjSBLOOo" class="text-center text-cyan-400 hover:underline">Acesse o projeto</a>
+              </div>
+              <!-- Slide 6 -->
+              <div class="sheet bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
+                <div class="text-center text-pink-400 text-3xl mb-2">
+                  <i class="ri-lightbulb-line"></i>
+                </div>
+                <h4 class="text-lg font-semibold mb-2 text-white text-center">Seu projeto aqui</h4>
+                <p class="text-white-600 mb-3 text-center">Meu próximo projeto pode ser na sua empresa!</p>
+                <a href="#contato" class="text-center text-cyan-400 hover:underline">Entre em contato</a>
+              </div>
+            
+      
+            </div>
+            <button id="btn-next" class="text-4xl hover:text-cyan-400 transition-colors focus:outline-none">
+              <i class="ri-arrow-right-s-line"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="contato" class="py-16 bg-black bg-opacity-40">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+          <div class="relative w-fit mx-auto mb-8">
+            <h3 class="text-3xl font-bold text-center relative z-10">Contato</h3>
+            <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <a href="https://www.linkedin.com/in/joao-marcelo-macedo-pimentel-78a37b1b2" target="_blank" class="bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-cyan-700 transition-colors border border-cyan-500/30">
+              <i class="fab fa-linkedin text-3xl mb-2 text-white"></i>
+              <h4 class="font-semibold">LinkedIn</h4>
+              <p class="text-sm">João Marcelo</p>
+            </a>
+            <a href="https://github.com/joaop1mentel" target="_blank" class="bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-cyan-700 transition-colors border border-cyan-500/30">
+              <i class="fab fa-github text-3xl mb-2 text-white"></i>
+              <h4 class="font-semibold">GitHub</h4>
+              <p class="text-sm">joaop1mentel</p>
+            </a>
+          </div>
+
+          <a href="mailto:joaomarcelopimentel@gmail.com" class="inline-block bg-white/10 text-white px-8 py-3 rounded-full hover:bg-cyan-700 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50">
+            <i class="fas fa-paper-plane mr-2"></i> Enviar Email
+          </a>
+        </div>
+      </section>
+
+      <footer class="text-center py-6 bg-black bg-opacity-40 text-sm text-white border-t border-cyan-900">
+        <p>© 2025 João Marcelo Macedo Pimentel. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
