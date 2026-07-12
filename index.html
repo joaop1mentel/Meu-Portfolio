@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfólio de João Marcelo, estudante de Engenharia de Computação na UERJ">
-    <meta name="keywords" content="portfólio, desenvolvedor, engenharia de computação, UERJ">
+    <meta name="description" content="Portfólio de João Marcelo Pimentel — Assistente de Dados Júnior na GigaLink, graduando em Engenharia de Computação (UERJ), com foco em BI, RevOps e automação de processos.">
+    <meta name="keywords" content="portfólio, dados, business intelligence, BI, RevOps, SQL, Power BI, automação, n8n, engenharia de computação, UERJ">
     <meta name="author" content="João Marcelo Macedo Pimentel">
-    <title>Portfólio | João Marcelo - Desenvolvedor</title>
+    <title>João Marcelo Pimentel | Dados, BI & Automação</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,17 +18,55 @@
 
   <body class="font-sans text-purple-100 bg-gradient-to-br from-gray-900 via-purple-900 to-black transition-colors duration-300">
 
+    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" class="text-lg font-bold tracking-wide text-white">João<span class="text-cyan-400">.</span>Marcelo</a>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
+          <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Experiência</a>
+          <a href="#habilidades" class="hover:text-cyan-400 transition-colors">Habilidades</a>
+          <a href="#projetos" class="hover:text-cyan-400 transition-colors">Projetos</a>
+          <a href="#contato" class="px-4 py-2 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-colors">Contato</a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-2xl text-cyan-400 focus:outline-none">
+          <i class="ri-menu-3-line"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden flex flex-col items-center gap-4 py-0 text-sm font-medium bg-black/70 backdrop-blur-sm">
+        <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
+        <a href="#experiencia" class="hover:text-cyan-400 transition-colors">Experiência</a>
+        <a href="#habilidades" class="hover:text-cyan-400 transition-colors">Habilidades</a>
+        <a href="#projetos" class="hover:text-cyan-400 transition-colors">Projetos</a>
+        <a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a>
+      </div>
+    </nav>
+
     <section class="min-h-screen flex flex-col items-center justify-center text-center px-4">
-      <img 
+      <img
         id="avatar"
         class="w-32 h-32 rounded-full mx-auto mb-6 transition-transform duration-300 hover:scale-110 cursor-pointer shadow-lg floating border-4 border-cyan-400"
-        src="eu.jpeg" 
-        alt="João Marcelo" 
+        src="eu.jpeg"
+        alt="João Marcelo"
       />
       <div class="typewriter">
         <h2 class="text-4xl font-bold mb-4">Olá, eu sou João Marcelo</h2>
       </div>
-      <div class="flex space-x-4 mt-4">
+
+      <div class="flex flex-wrap justify-center gap-2 mb-4 px-4">
+        <span class="badge">Business Intelligence</span>
+        <span class="badge">RevOps</span>
+        <span class="badge">Automação (n8n)</span>
+        <span class="badge">SQL & Python</span>
+      </div>
+
+      <p class="text-purple-200/80 max-w-xl mx-auto px-4">
+        Assistente de Dados Júnior na GigaLink e graduando em Engenharia de Computação (UERJ), transformando dados em decisões.
+      </p>
+
+      <div class="flex space-x-4 mt-6">
         <a href="https://github.com/joaop1mentel" target="_blank" class="text-2xl text-cyan-400 hover:text-white transition-colors">
           <i class="fab fa-github"></i>
         </a>
@@ -45,7 +83,7 @@
         <div class="arrow"></div>
       <div class="arrow"></div>
     </div>
-    
+
     </section>
 
     <div id="conteudo" class="transition-opacity duration-700">
@@ -61,16 +99,63 @@
           </div>
           <div class="md:w-2/3">
             <p class="leading-relaxed mb-4">
-              Sou estudante de Engenharia de Computação na UERJ, apaixonado por tecnologia, design e criação de soluções práticas. 
+              Sou Assistente de Dados Júnior na GigaLink e graduando em Engenharia de Computação na UERJ, com foco em Business Intelligence (BI), RevOps e automação de processos. No dia a dia, consolido bases de dados complexas de múltiplos ecossistemas — Grafana, CRM, Looker Studio e Excel — e transformo isso em dashboards e narrativas que apoiam decisões estratégicas da diretoria.
             </p>
             <p class="leading-relaxed mb-4">
-              Tenho experiência em desenvolvimento web (front-end e back-end), com boa base em algoritmos e estruturas de dados. Gosto de transformar ideias em ferramentas funcionais que ajudam pessoas no dia a dia
+              Tenho experiência prática com SQL, Python e n8n para automatizar fluxos internos, além de uma base sólida em desenvolvimento web (HTML, CSS, JavaScript) construída ao longo de anos como freelancer. Proativo, criativo e movido por resolver problemas reais com dados e tecnologia.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="habilidades" class="py-16 bg-black bg-opacity-40">
+      <section id="experiencia" class="py-16 bg-black bg-opacity-40">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="relative w-fit mx-auto mb-12">
+            <h3 class="text-3xl font-bold text-center relative z-10">Experiência</h3>
+            <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
+          </div>
+
+          <div class="relative border-l-2 border-cyan-500/30 ml-3 space-y-10">
+
+            <div class="relative pl-8">
+              <span class="timeline-dot timeline-dot-active"></span>
+              <p class="text-sm text-cyan-400 font-semibold">Julho de 2026 – Atual</p>
+              <h4 class="text-lg font-bold text-white">Assistente de Dados Júnior · GigaLink</h4>
+              <p class="text-purple-200/80 mt-1">Modelagem, extração e análise de dados para decisão estratégica. Dashboards corporativos via Grafana e Looker Studio. Automação de processos internos com n8n, Python e SQL.</p>
+            </div>
+
+            <div class="relative pl-8">
+              <span class="timeline-dot"></span>
+              <p class="text-sm text-cyan-400 font-semibold">Janeiro de 2026 – Junho de 2026</p>
+              <h4 class="text-lg font-bold text-white">Estagiário de Inteligência Comercial & Dados · GigaLink</h4>
+              <p class="text-purple-200/80 mt-1">BI e RevOps: consolidação e saneamento de bases (Grafana, Leads2b, Looker Studio, Excel), consultas SQL e mapeamento de causas raiz de oscilações financeiras. Dashboards de fechamento mensal para a diretoria.</p>
+            </div>
+
+            <div class="relative pl-8">
+              <span class="timeline-dot"></span>
+              <p class="text-sm text-cyan-400 font-semibold">Junho de 2023 – Julho de 2024</p>
+              <h4 class="text-lg font-bold text-white">Diretor de Marketing · Iaguara Robótica (UERJ)</h4>
+              <p class="text-purple-200/80 mt-1">Liderança da área de Marketing e Comunicação Visual da equipe de robótica: identidade visual completa, logotipo oficial, uniformes, materiais institucionais e padronização das redes sociais.</p>
+            </div>
+
+            <div class="relative pl-8">
+              <span class="timeline-dot"></span>
+              <p class="text-sm text-cyan-400 font-semibold">2021 – 2025</p>
+              <h4 class="text-lg font-bold text-white">Desenvolvimento Web · Freelancer</h4>
+              <p class="text-purple-200/80 mt-1">Construção de sites responsivos, modernos e otimizados com WordPress, HTML, CSS e JavaScript para clientes diversos.</p>
+            </div>
+
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-3 mt-10">
+            <span class="badge">Podcast Pensamento Negro — Editor Audiovisual (2025)</span>
+            <span class="badge">Jovens no Clima — Suporte Técnico com Arduino (2025)</span>
+            <span class="badge">Serra Jr. Engenharia — Marketing & Programação (2022–2023)</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades" class="py-16">
   <div class="max-w-6xl mx-auto px-6">
     <div class="relative w-fit mx-auto mb-12">
       <h3 class="text-3xl font-bold text-center relative z-10">Habilidades</h3>
@@ -83,50 +168,50 @@
 
         <!-- 1 -->
         <div class="skill-card-3d">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12 mb-2">
-          <p>HTML & CSS</p>
+          <i class="ri-database-2-line text-4xl mb-2 text-cyan-300"></i>
+          <p>SQL</p>
         </div>
 
         <!-- 2 -->
         <div class="skill-card-3d">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12 mb-2">
-          <p>JavaScript</p>
+          <i class="ri-bar-chart-2-line text-4xl mb-2 text-cyan-300"></i>
+          <p>Power BI</p>
         </div>
 
         <!-- 3 -->
-        <div class="skill-card-3d">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="w-10 h-10 mb-3">
-          <p>Linguagem C</p>
-        </div>
-
-        <!-- 4 -->
         <div class="skill-card-3d">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 h-12 mb-2">
           <p>Python</p>
         </div>
 
+        <!-- 4 -->
+        <div class="skill-card-3d">
+          <i class="ri-line-chart-line text-4xl mb-2 text-cyan-300"></i>
+          <p>Grafana & Looker</p>
+        </div>
+
         <!-- 5 -->
         <div class="skill-card-3d">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-12 h-12 mb-2">
-          <p>TailwindCSS</p>
+          <i class="ri-flow-chart text-4xl mb-2 text-cyan-300"></i>
+          <p>Automação (n8n)</p>
         </div>
 
         <!-- 6 -->
         <div class="skill-card-3d">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 h-12 mb-2">
-          <p>Git</p>
+          <i class="ri-file-excel-2-line text-4xl mb-2 text-cyan-300"></i>
+          <p>Excel Avançado</p>
         </div>
 
         <!-- 7 -->
         <div class="skill-card-3d">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" class="w-12 h-12 mb-2">
-          <p>Photoshop</p>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12 mb-2">
+          <p>HTML, CSS & JS</p>
         </div>
 
         <!-- 8 -->
         <div class="skill-card-3d">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" class="w-12 h-12 mb-2 bg-white rounded-full">
-          <p>WordPress</p>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 h-12 mb-2">
+          <p>Git</p>
         </div>
 
       </div>
@@ -134,20 +219,42 @@
   </div>
 </section>
 
-      
+      <section id="formacao" class="py-16 bg-black bg-opacity-40">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="relative w-fit mx-auto mb-8">
+            <h3 class="text-3xl font-bold text-center relative z-10">Formação & Certificações</h3>
+            <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
+          </div>
 
-      <section id="projetos" class="py-16 bg-black bg-opacity-40">
+          <div class="text-center mb-8">
+            <p class="text-white font-semibold">Universidade do Estado do Rio de Janeiro (UERJ)</p>
+            <p class="text-purple-200/80">Bacharelado em Engenharia de Computação — Previsão de formatura: 2029</p>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="badge">Python — Santander / Serratec</span>
+            <span class="badge">Power BI — Bradesco</span>
+            <span class="badge">Gestão de Projetos — LinkedIn Learning</span>
+            <span class="badge">HTML, CSS & JS — Bradesco</span>
+            <span class="badge">Excel Avançado</span>
+            <span class="badge">Inglês B2 — Cambridge</span>
+            <span class="badge">Fotografia — Ateliê da Imagem</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="py-16">
         <div class="max-w-6xl mx-auto px-6">
           <div class="relative w-fit mx-auto mb-8">
             <h3 class="text-3xl font-bold relative z-10">Projetos</h3>
             <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
           </div>
-      
+
           <div class="flex items-center justify-center gap-6">
             <button id="btn-prev" class="text-4xl hover:text-cyan-400 transition-colors focus:outline-none">
               <i class="ri-arrow-left-s-line"></i>
             </button>
-      
+
             <div class="relative w-full max-w-2xl h-64">
               <!-- Slide 1 -->
               <div class="sheet active bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
@@ -158,7 +265,7 @@
                 <p class="text-white-600 mb-3 text-center">Site para vendas, com geração de QR Code para pagamento por Pix.</p>
                 <a href="https://frutas-steel.vercel.app/" target="_blank" class="text-cyan-400 hover:underline text-center">Veja o Site</a>
               </div>
-      
+
               <!-- Slide 2 -->
               <div class="sheet active bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
                 <div class="text-center text-yellow-400 text-3xl mb-2">
@@ -168,7 +275,7 @@
                 <p class="text-white-600 mb-3 text-center">Projeto em andamento, mas pelo link você confere no Figma a ideia.</p>
                 <a href="https://www.figma.com/design/kcjZe8o3ACV96s1eGF4GhO/Untitled?node-id=0-1&t=PL4MVdpNrfNFqQQL-1" target="_blank" class="text-cyan-400 hover:underline text-center">Acesse aqui o projeto</a>
               </div>
-      
+
               <!-- Slide 3 -->
               <div class="sheet bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
                 <div class="text-center text-blue-400 text-3xl mb-2">
@@ -178,7 +285,7 @@
                 <p class="text-white-600 mb-3 text-center">Sistema completo para criar, ler, atualizar e deletar usuários por ID.</p>
                 <a href="https://github.com/joaop1mentel/Crud/blob/main/crud.c" target="_blank" class="text-cyan-400 hover:underline text-center">Ver código</a>
               </div>
-      
+
               <!-- Slide 4 -->
               <div class="sheet bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
                 <div class="text-center text-purple-400 text-3xl mb-2">
@@ -188,7 +295,7 @@
                 <p class="text-white-600 mb-3 text-center">Código em C para inserir números em um vetor usando o sistema de deque.</p>
                 <a href="https://github.com/joaop1mentel/Estudo/blob/main/Deque" target="_blank" class="text-cyan-400 hover:underline text-center">Ver código</a>
               </div>
-      
+
               <!-- Slide 5 -->
               <div class="sheet bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/30 shadow-md">
                 <div class="text-center text-pink-400 text-3xl mb-2">
@@ -207,8 +314,8 @@
                 <p class="text-white-600 mb-3 text-center">Meu próximo projeto pode ser na sua empresa!</p>
                 <a href="#contato" class="text-center text-cyan-400 hover:underline">Entre em contato</a>
               </div>
-            
-      
+
+
             </div>
             <button id="btn-next" class="text-4xl hover:text-cyan-400 transition-colors focus:outline-none">
               <i class="ri-arrow-right-s-line"></i>
@@ -216,7 +323,7 @@
           </div>
         </div>
       </section>
-      
+
 
       <section id="contato" class="py-16 bg-black bg-opacity-40">
         <div class="max-w-3xl mx-auto px-6 text-center">
@@ -245,7 +352,7 @@
       </section>
 
       <footer class="text-center py-6 bg-black bg-opacity-40 text-sm text-white border-t border-cyan-900">
-        <p>© 2025 João Marcelo Macedo Pimentel. Todos os direitos reservados.</p>
+        <p>© 2026 João Marcelo Macedo Pimentel. Todos os direitos reservados.</p>
       </footer>
     </div>
 

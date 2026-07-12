@@ -24,6 +24,65 @@ body {
 }
 
 /* ----------------------------------------------
+   NAVBAR
+---------------------------------------------- */
+#navbar {
+    background: transparent;
+}
+#navbar.scrolled {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(34, 211, 238, 0.15);
+}
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+#mobile-menu.active {
+    max-height: 300px;
+    padding: 16px 0;
+}
+
+/* ----------------------------------------------
+   BADGES / TAGS
+---------------------------------------------- */
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #67e8f9;
+    background: rgba(34, 211, 238, 0.08);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+.badge:hover {
+    background: rgba(34, 211, 238, 0.18);
+    transform: translateY(-2px);
+}
+
+/* ----------------------------------------------
+   TIMELINE (Experiência)
+---------------------------------------------- */
+.timeline-dot {
+    position: absolute;
+    left: -9px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 9999px;
+    background: rgba(34, 211, 238, 0.4);
+}
+.timeline-dot-active {
+    background: #22d3ee;
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
+}
+
+/* ----------------------------------------------
    TYPEWRITER
 ---------------------------------------------- */
 .typewriter h2 {
@@ -165,21 +224,6 @@ body {
 .hover-effect:hover {
     transform: scale(1.05);
     color: var(--primary-color);
-}
-
-/* ----------------------------------------------
-   MOBILE MENU
----------------------------------------------- */
-@media (max-width: 767px) {
-    #mobile-menu {
-        transition: all 0.3s ease;
-        max-height: 0;
-        overflow: hidden;
-    }
-    #mobile-menu.active {
-        max-height: 300px;
-        padding: 10px 0;
-    }
 }
 
 /* ----------------------------------------------

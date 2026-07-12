@@ -93,12 +93,31 @@ if (habilidadesSection) observer.observe(habilidadesSection);
 /* Navbar ao rolar */
 window.addEventListener('scroll', function () {
     const navbar = document.getElementById('navbar');
-    if (window.scrollY > 100) {
-        navbar.classList.add('shadow-lg', 'bg-blue-950/90');
-    } else {
-        navbar.classList.remove('shadow-lg', 'bg-blue-950/90');
-    }
+    if (!navbar) return;
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
+
+/* Menu mobile (hamburger) */
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('ri-menu-3-line');
+        icon.classList.toggle('ri-close-line');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.add('ri-menu-3-line');
+            icon.classList.remove('ri-close-line');
+        });
+    });
+}
 
 /* ---------------------------------------------------
     SWIPER
