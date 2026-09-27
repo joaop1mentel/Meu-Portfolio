@@ -85,43 +85,6 @@ body {
 /* ----------------------------------------------
    TYPEWRITER
 ---------------------------------------------- */
-.typewriter h2 {
-    overflow: hidden;
-    font-size: clamp(1.5rem, 6vw, 3rem);
-    border-right: 0.15em solid #93c5fd;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 0.05em;
-    animation:
-        typing 3.5s steps(40, end),
-        blink-caret 0.75s step-end infinite;
-    max-width: 100%;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #93c5fd; }
-}
-
-@media (max-width: 375px) {
-    .typewriter h2 {
-        font-size: clamp(1.3rem, 4.5vw, 1.8rem);
-        letter-spacing: 0.03em;
-        animation:
-            typing 2.2s steps(28, end),
-            blink-caret 0.7s step-end infinite;
-    }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-    .typewriter h2 {
-        font-size: clamp(1.4rem, 4vw, 2rem);
-    }
-}
-
 /* ----------------------------------------------
    CARDS (Habilidades normais)
 ---------------------------------------------- */
@@ -230,12 +193,6 @@ body {
    RESPONSIVIDADE GERAL
 ---------------------------------------------- */
 @media (max-width: 640px) {
-    .typewriter h2 {
-        font-size: 1.8rem;
-        animation:
-            typing 2.5s steps(30, end),
-            blink-caret .75s step-end infinite;
-    }
 
     #sobre, #habilidades, #projetos, #contato {
         padding-top: 6rem;
@@ -473,3 +430,20 @@ body {
 }
 
 
+
+/* Cabeçalho: espaço estável durante a digitação, inclusive em telas pequenas. */
+.hero { position: relative; padding-top: 7rem; padding-bottom: 3rem; min-height: 100svh; }
+.hero > * { flex-shrink: 0; }
+.typewriter { width: 100%; max-width: 52rem; margin-bottom: 1.5rem; }
+.typewriter h1 { margin: 0; font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.25; overflow-wrap: break-word; text-wrap: balance; animation: typing 3.5s steps(28, end) both; }
+@keyframes typing { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+.hero .scroll-indicator { position: static; transform: none; margin-top: 2.5rem; }
+.resume-button { display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .625rem; margin-top: 1.5rem; padding: .875rem 1.5rem; max-width: 100%; border: 2px solid #22d3ee; border-radius: 9999px; background: #22d3ee; color: #111827; font-weight: 700; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+.resume-button:hover { background: #67e8f9; transform: translateY(-2px); }
+.resume-button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.resume-format { font-size: .75rem; }
+@media (prefers-reduced-motion: reduce) {
+ .typewriter h1, .hero .floating, .scroll-indicator .arrow { animation: none; }
+ .scroll-indicator .arrow { opacity: 1; }
+ .resume-button { transition: none; }
+}
