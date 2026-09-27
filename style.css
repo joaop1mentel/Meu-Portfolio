@@ -447,3 +447,24 @@ body {
  .scroll-indicator .arrow { opacity: 1; }
  .resume-button { transition: none; }
 }
+
+/* Projetos e habilidades alinhados ao currículo. */
+.stack-groups, .case-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stack-groups { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stack-groups > div, .case-card { background: rgba(255,255,255,.05); border: 1px solid rgba(34,211,238,.25); border-radius: 1rem; padding: 1.5rem; min-width: 0; }
+.stack-groups h4 { color: #67e8f9; font-weight: 700; margin-bottom: .6rem; }
+.stack-groups p, .case-card dd { line-height: 1.7; color: #e9d5ff; }
+.case-number { font-size: .75rem; color: #67e8f9; letter-spacing: .08em; }
+.case-card h4 { font-size: 1.5rem; font-weight: 700; color: white; margin: .8rem 0; line-height: 1.3; }
+.case-tech { color: #67e8f9; font-size: .85rem; margin-bottom: 1.25rem; }
+.case-card dt { font-weight: 700; color: white; margin-top: 1rem; }
+.case-card dd { margin: .3rem 0 0; }
+.project-flow { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.project-flow li { padding: .4rem .65rem; border-radius: .4rem; background: rgba(34,211,238,.1); color: #a5f3fc; font-size: .8rem; }
+.project-flow li:not(:last-child)::after { content: ' →'; }
+.projects-intro, .diagram-note { text-align: center; color: #e9d5ff; margin: 0 auto 2rem; max-width: 44rem; }
+.diagram-note { font-size: .8rem; margin-top: 1.5rem; }
+.carousel-3d { position: relative; max-width: 100%; margin-bottom: 3rem; }
+#outros-projetos .sheet { overflow-y: auto; }
+section[id] { scroll-margin-top: 5rem; }
+@media (max-width: 760px) { .stack-groups, .case-grid { grid-template-columns: 1fr; } .case-card { padding: 1.25rem; } }

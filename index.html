@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -20,7 +19,7 @@
 
     <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" class="text-lg font-bold tracking-wide text-white">João<span class="text-cyan-400">.</span>Marcelo</a>
+        <a href="#inicio" class="text-lg font-bold tracking-wide text-white">João<span class="text-cyan-400">.</span>Marcelo</a>
 
         <div class="hidden md:flex items-center gap-8 text-sm font-medium">
           <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
@@ -30,7 +29,7 @@
           <a href="#contato" class="px-4 py-2 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-colors">Contato</a>
         </div>
 
-        <button id="menu-btn" class="md:hidden text-2xl text-cyan-400 focus:outline-none">
+        <button aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu" id="menu-btn" class="md:hidden text-2xl text-cyan-400 focus:outline-none">
           <i class="ri-menu-3-line"></i>
         </button>
       </div>
@@ -44,7 +43,7 @@
       </div>
     </nav>
 
-    <section class="hero min-h-screen flex flex-col items-center justify-center text-center px-4">
+    <section id="inicio" class="hero min-h-screen flex flex-col items-center justify-center text-center px-4">
       <img
         id="avatar"
         class="w-32 h-32 rounded-full mx-auto mb-6 transition-transform duration-300 hover:scale-110 cursor-pointer shadow-lg floating border-4 border-cyan-400"
@@ -63,14 +62,14 @@
       </div>
 
       <p class="text-purple-200/80 max-w-xl mx-auto px-4">
-        Assistente de Dados Júnior na GigaLink e graduando em Engenharia de Computação (UERJ), transformando dados em decisões.
+        Assistente de Dados Júnior na GigaLink e graduando em Engenharia de Computação (UERJ). Desenvolvo integrações, pipelines de dados e automações com Python, SQL e n8n.
       </p>
 
       <div class="flex space-x-4 mt-6">
-        <a href="https://github.com/joaop1mentel" target="_blank" class="text-2xl text-cyan-400 hover:text-white transition-colors">
+        <a href="https://github.com/joaop1mentel" target="_blank" rel="noopener noreferrer" class="text-2xl text-cyan-400 hover:text-white transition-colors">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/joao-marcelo-macedo-pimentel-78a37b1b2" target="_blank" class="text-2xl text-cyan-400 hover:text-white transition-colors">
+        <a href="https://www.linkedin.com/in/joao-marcelo-macedo-pimentel-78a37b1b2" target="_blank" rel="noopener noreferrer" class="text-2xl text-cyan-400 hover:text-white transition-colors">
           <i class="fab fa-linkedin"></i>
         </a>
         <a href="mailto:joaomarcelopimentel@gmail.com" class="text-2xl text-cyan-400 hover:text-white transition-colors">
@@ -99,10 +98,10 @@
           </div>
           <div class="md:w-2/3">
             <p class="leading-relaxed mb-4">
-              Sou Assistente de Dados Júnior na GigaLink e graduando em Engenharia de Computação na UERJ, com foco em Business Intelligence (BI), RevOps e automação de processos. No dia a dia, consolido bases de dados complexas de múltiplos ecossistemas — Grafana, CRM, Looker Studio e Excel — e transformo isso em dashboards e narrativas que apoiam decisões estratégicas da diretoria.
+              Sou Assistente de Dados Júnior na GigaLink e graduando em Engenharia de Computação na UERJ. Trabalho com automação de processos, integração de sistemas e dados para análise: da coleta e organização das informações à entrega de relatórios e dashboards gerenciais.
             </p>
             <p class="leading-relaxed mb-4">
-              Tenho experiência prática com SQL, Python e n8n para automatizar fluxos internos, além de uma base sólida em desenvolvimento web (HTML, CSS, JavaScript) construída ao longo de anos como freelancer. Proativo, criativo e movido por resolver problemas reais com dados e tecnologia.
+              Desenvolvo fluxos com n8n, Python e SQL, integro APIs e construo serviços com FastAPI e bases relacionais com MySQL. Nos projetos, aplico tratamento de falhas, deduplicação e revisão humana em fluxos com IA. Também atuo como freelancer em desenvolvimento web e automação desde 2022.
             </p>
           </div>
         </div>
@@ -121,7 +120,7 @@
               <span class="timeline-dot timeline-dot-active"></span>
               <p class="text-sm text-cyan-400 font-semibold">Julho de 2026 – Atual</p>
               <h4 class="text-lg font-bold text-white">Assistente de Dados Júnior · GigaLink</h4>
-              <p class="text-purple-200/80 mt-1">Modelagem, extração e análise de dados para decisão estratégica. Dashboards corporativos via Grafana e Looker Studio. Automação de processos internos com n8n, Python e SQL.</p>
+              <p class="text-purple-200/80 mt-1">Desenvolvimento e manutenção de automações com n8n, integrando APIs e microsserviços. Tratamento de falhas, controle de concorrência e idempotência nas integrações, além de modelagem de bases relacionais para análise.</p>
             </div>
 
             <div class="relative pl-8">
@@ -140,9 +139,9 @@
 
             <div class="relative pl-8">
               <span class="timeline-dot"></span>
-              <p class="text-sm text-cyan-400 font-semibold">2021 – 2025</p>
-              <h4 class="text-lg font-bold text-white">Desenvolvimento Web · Freelancer</h4>
-              <p class="text-purple-200/80 mt-1">Construção de sites responsivos, modernos e otimizados com WordPress, HTML, CSS e JavaScript para clientes diversos.</p>
+              <p class="text-sm text-cyan-400 font-semibold">2022 – Atual</p>
+              <h4 class="text-lg font-bold text-white">Desenvolvimento Web & Automação · Freelancer</h4>
+              <p class="text-purple-200/80 mt-1">Construção de sites responsivos com WordPress, HTML, CSS e JavaScript. Desenvolvimento de protótipos de automação com Arduino para coleta de dados ambientais e simulações.</p>
             </div>
 
           </div>
@@ -162,6 +161,11 @@
       <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
     </div>
 
+    <div class="stack-groups" aria-label="Tecnologias e áreas de atuação">
+      <div><h4>Dados & análise</h4><p>Python · SQL · MySQL · ETL · Power BI · Excel</p></div>
+      <div><h4>Integrações & automação</h4><p>n8n · FastAPI · APIs REST · Selenium · CRON</p></div>
+      <div><h4>IA aplicada</h4><p>Integração de LLMs · Fallbacks de provedores · Aprovação humana</p></div>
+    </div>
     <!-- Carrossel Circular 3D -->
     <div class="carousel-3d">
       <div id="ring" class="ring">
@@ -243,15 +247,16 @@
         </div>
       </section>
 
-      <section id="projetos" class="py-16">
+      <section id="projetos" class="py-16"><div class="max-w-6xl mx-auto px-6"><h3 class="text-3xl font-bold text-center mb-4">Projetos de Dados & Automação</h3><p class="projects-intro">Integrações, pipelines e aplicações que conectam dados ao trabalho do dia a dia.</p><div class="case-grid"><article class="case-card"><span class="case-number">01 / AUTOMAÇÃO & DADOS</span><h4>Motor de Viabilidade Técnica</h4><p class="case-tech">Python · FastAPI · n8n · APIs REST</p><dl><dt>Desafio</dt><dd>Automatizar o cálculo de infraestrutura em telecomunicações.</dd><dt>Minha contribuição</dt><dd>Desenhei uma arquitetura orientada a eventos, integrando endpoints de chat ao n8n e isolando a regra geoespacial em um microsserviço Python com FastAPI.</dd><dt>Entrega</dt><dd>Cálculo automatizado com mecanismos de resiliência e degradação em cascata.</dd></dl><ol class="project-flow" aria-label="Fluxo simplificado do projeto"><li>Chat</li><li>n8n</li><li>FastAPI</li><li>Cálculo geoespacial</li></ol></article><article class="case-card"><span class="case-number">02 / AUTOMAÇÃO & DADOS</span><h4>Pipeline de Fechamento</h4><p class="case-tech">Python · Selenium · MySQL · ETL · CRON</p><dl><dt>Desafio</dt><dd>Consolidar a coleta e o tratamento de dados para relatórios corporativos.</dd><dt>Minha contribuição</dt><dd>Construí um pipeline assíncrono agendado por CRON, com extração via Selenium, deduplicação e armazenamento em MySQL.</dd><dt>Entrega</dt><dd>Geração e envio automatizado de relatórios em PDF e WhatsApp.</dd></dl><ol class="project-flow" aria-label="Fluxo simplificado do projeto"><li>Coleta</li><li>Deduplicação</li><li>MySQL</li><li>Relatórios</li></ol></article><article class="case-card"><span class="case-number">03 / AUTOMAÇÃO & DADOS</span><h4>Agregador Automatizado de Eventos</h4><p class="case-tech">n8n · MySQL · ETL · CRON</p><dl><dt>Desafio</dt><dd>Reunir e organizar informações de eventos em nível nacional.</dd><dt>Minha contribuição</dt><dd>Desenvolvi um projeto pessoal com execução diária no n8n para coleta, sanitização, enriquecimento e filtragem de dados da web.</dd><dt>Entrega</dt><dd>Consolidação das informações em uma base relacional estruturada.</dd></dl><ol class="project-flow" aria-label="Fluxo simplificado do projeto"><li>Web</li><li>Tratamento</li><li>Enriquecimento</li><li>MySQL</li></ol></article><article class="case-card"><span class="case-number">04 / AUTOMAÇÃO & DADOS</span><h4>Esteira de Mídias com IA</h4><p class="case-tech">n8n · LLMs · Integrações · Human-in-the-loop</p><dl><dt>Desafio</dt><dd>Integrar geração de conteúdo e aprovação em um fluxo de trabalho.</dd><dt>Minha contribuição</dt><dd>Orquestrei um sistema com mais de 400 nós no n8n, integrando modelos de linguagem e alternativas automáticas entre provedores.</dd><dt>Entrega</dt><dd>Fluxo de geração e aprovação com revisão humana para controle de qualidade.</dd></dl><ol class="project-flow" aria-label="Fluxo simplificado do projeto"><li>Geração com IA</li><li>Fallbacks</li><li>Revisão humana</li><li>Aprovação</li></ol></article></div><p class="diagram-note">Fluxos simplificados para apresentar a arquitetura dos projetos.</p></div></section>
+      <section id="outros-projetos" class="py-16">
         <div class="max-w-6xl mx-auto px-6">
           <div class="relative w-fit mx-auto mb-8">
-            <h3 class="text-3xl font-bold relative z-10">Projetos</h3>
+            <h3 class="text-3xl font-bold relative z-10">Outros projetos · Web & Programação</h3>
             <div class="absolute bottom-0 left-0 w-full h-2 bg-cyan-400 opacity-60 translate-y-1"></div>
           </div>
 
           <div class="flex items-center justify-center gap-6">
-            <button id="btn-prev" class="text-4xl hover:text-cyan-400 transition-colors focus:outline-none">
+            <button aria-label="Projeto anterior" id="btn-prev" class="text-4xl hover:text-cyan-400 transition-colors focus:outline-none">
               <i class="ri-arrow-left-s-line"></i>
             </button>
 
@@ -263,7 +268,7 @@
                 </div>
                 <h4 class="text-lg font-semibold mb-2 text-white text-center">Site de vendas</h4>
                 <p class="text-white-600 mb-3 text-center">Site para vendas, com geração de QR Code para pagamento por Pix.</p>
-                <a href="https://frutas-steel.vercel.app/" target="_blank" class="text-cyan-400 hover:underline text-center">Veja o Site</a>
+                <a href="https://frutas-steel.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline text-center">Veja o Site</a>
               </div>
 
               <!-- Slide 2 -->
@@ -273,7 +278,7 @@
                 </div>
                 <h4 class="text-lg font-semibold mb-2 text-white text-center">Web Site de programação</h4>
                 <p class="text-white-600 mb-3 text-center">Projeto em andamento, mas pelo link você confere no Figma a ideia.</p>
-                <a href="https://www.figma.com/design/kcjZe8o3ACV96s1eGF4GhO/Untitled?node-id=0-1&t=PL4MVdpNrfNFqQQL-1" target="_blank" class="text-cyan-400 hover:underline text-center">Acesse aqui o projeto</a>
+                <a href="https://www.figma.com/design/kcjZe8o3ACV96s1eGF4GhO/Untitled?node-id=0-1&t=PL4MVdpNrfNFqQQL-1" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline text-center">Acesse aqui o projeto</a>
               </div>
 
               <!-- Slide 3 -->
@@ -283,7 +288,7 @@
                 </div>
                 <h4 class="text-lg font-semibold mb-2 text-white text-center">CRUD em C</h4>
                 <p class="text-white-600 mb-3 text-center">Sistema completo para criar, ler, atualizar e deletar usuários por ID.</p>
-                <a href="https://github.com/joaop1mentel/Crud/blob/main/crud.c" target="_blank" class="text-cyan-400 hover:underline text-center">Ver código</a>
+                <a href="https://github.com/joaop1mentel/Crud/blob/main/crud.c" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline text-center">Ver código</a>
               </div>
 
               <!-- Slide 4 -->
@@ -293,7 +298,7 @@
                 </div>
                 <h4 class="text-lg font-semibold mb-2 text-white text-center">Implementação de Deque</h4>
                 <p class="text-white-600 mb-3 text-center">Código em C para inserir números em um vetor usando o sistema de deque.</p>
-                <a href="https://github.com/joaop1mentel/Estudo/blob/main/Deque" target="_blank" class="text-cyan-400 hover:underline text-center">Ver código</a>
+                <a href="https://github.com/joaop1mentel/Estudo/blob/main/Deque" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline text-center">Ver código</a>
               </div>
 
               <!-- Slide 5 -->
@@ -317,7 +322,7 @@
 
 
             </div>
-            <button id="btn-next" class="text-4xl hover:text-cyan-400 transition-colors focus:outline-none">
+            <button aria-label="Próximo projeto" id="btn-next" class="text-4xl hover:text-cyan-400 transition-colors focus:outline-none">
               <i class="ri-arrow-right-s-line"></i>
             </button>
           </div>
@@ -333,12 +338,12 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <a href="https://www.linkedin.com/in/joao-marcelo-macedo-pimentel-78a37b1b2" target="_blank" class="bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-cyan-700 transition-colors border border-cyan-500/30">
+            <a href="https://www.linkedin.com/in/joao-marcelo-macedo-pimentel-78a37b1b2" target="_blank" rel="noopener noreferrer" class="bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-cyan-700 transition-colors border border-cyan-500/30">
               <i class="fab fa-linkedin text-3xl mb-2 text-white"></i>
               <h4 class="font-semibold">LinkedIn</h4>
               <p class="text-sm">João Marcelo</p>
             </a>
-            <a href="https://github.com/joaop1mentel" target="_blank" class="bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-cyan-700 transition-colors border border-cyan-500/30">
+            <a href="https://github.com/joaop1mentel" target="_blank" rel="noopener noreferrer" class="bg-white/10 backdrop-blur-sm p-4 rounded-lg hover:bg-cyan-700 transition-colors border border-cyan-500/30">
               <i class="fab fa-github text-3xl mb-2 text-white"></i>
               <h4 class="font-semibold">GitHub</h4>
               <p class="text-sm">joaop1mentel</p>

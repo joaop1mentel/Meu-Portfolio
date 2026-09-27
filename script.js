@@ -104,6 +104,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
+        menuBtn.setAttribute('aria-expanded', String(mobileMenu.classList.contains('active')));
         const icon = menuBtn.querySelector('i');
         icon.classList.toggle('ri-menu-3-line');
         icon.classList.toggle('ri-close-line');
@@ -112,6 +113,7 @@ if (menuBtn && mobileMenu) {
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
             const icon = menuBtn.querySelector('i');
             icon.classList.add('ri-menu-3-line');
             icon.classList.remove('ri-close-line');
