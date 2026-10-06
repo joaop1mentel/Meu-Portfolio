@@ -468,3 +468,17 @@ body {
 #outros-projetos .sheet { overflow-y: auto; }
 section[id] { scroll-margin-top: 5rem; }
 @media (max-width: 760px) { .stack-groups, .case-grid { grid-template-columns: 1fr; } .case-card { padding: 1.25rem; } }
+
+/* Leitura direta e detalhes sob demanda. */
+.hero-name { color: #67e8f9; font-weight: 600; letter-spacing: .08em; margin-bottom: 1rem; }
+.hero-title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.12; font-weight: 800; max-width: 48rem; margin: 0 auto 1.5rem; text-wrap: balance; }
+.stack-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.case-grid { align-items: start; }
+.case-overview dt { font-size: .8rem; color: #67e8f9; }
+.case-overview dd { line-height: 1.5; }
+.case-details { border-top: 1px solid rgba(34,211,238,.2); margin-top: 1.4rem; padding-top: 1rem; }
+.case-details summary { cursor: pointer; color: #67e8f9; font-weight: 600; padding: .25rem 0; }
+.case-details summary:focus-visible { outline: 2px solid #67e8f9; outline-offset: 5px; border-radius: 4px; }
+.details-open, .case-details[open] .details-closed { display: none; }
+.case-details[open] .details-open { display: inline; }
+@media(max-width: 760px) { .stack-groups { grid-template-columns: 1fr; } }
